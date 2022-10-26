@@ -10,9 +10,8 @@ const controllers = {
     registro:(req, res) => {
         const errors = validationResult(req);
 
-        if(!errors.isEmpty()){
-            res.render('./index',{validacion: errors.array()});
-        } else {
+        if(errors.isEmpty()){
+
             let usuarioNuevo = {
                 nombre: req.body.nombre,
                 usuario: req.body.usuario,
@@ -22,10 +21,10 @@ const controllers = {
             }
 
             usuario.push(usuarioNuevo);
-
             fs.writeFileSync(pathUsuario,JSON.stringify(usuario,null," "));
             res.redirect('/');
-
+        } else {
+            res.render('index',{validacion: errors.array()});
         }
     }
 }

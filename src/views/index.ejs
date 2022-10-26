@@ -14,31 +14,16 @@
                 <label>Nombre y apellido</label>
                 <input type="text" name="nombre">
                 <% if(locals && locals.validacion) {%> 
-                    <% if(locals.validacion[2].param == "nombre"){ %> 
-                        <label style="color: red"><%= locals.validacion[2].msg %> </label>
-                    <% } %> 
-                <% } %> 
-                <label>usuario</label>
-                <input type="text" name="usuario">
-                <% if(locals && locals.validacion) {%> 
-                    <% if(locals.validacion[3].param == "usuario"){ %> 
-                        <label style="color: red"> <%= locals.validacion[3].msg %> </label>
-                    <% } %> 
-                <% } %> 
-                <label>Email</label>
-                <input type="email" name="email">
-                <% if(locals && locals.validacion) {%> 
-                    <% if(locals.validacion[0].param == "email"){ %> 
+                    <% if(locals.validacion[0].param == "nombre"){ %> 
                         <label style="color: red"><%= locals.validacion[0].msg %> </label>
                     <% } %> 
-                <% } %> 
+                <% } %>  
+                <label>usuario</label>
+                <input type="text" name="usuario">
+                <label>Email</label>
+                <input type="email" name="email">
                 <label>Contraseña</label>
                 <input type="password" name="password">
-                <% if(locals && locals.validacion) {%> 
-                    <% if(locals.validacion[1].param == "password"){ %> 
-                        <label style="color: red"><%= locals.validacion[1].msg %> </label>
-                    <% } %> 
-                <% } %> 
                 <button type="submit">Enviar</button>
             </form>
         </main>
