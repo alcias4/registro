@@ -22,7 +22,7 @@
                 <input type="text" name="usuario">
                 <% if(locals && locals.validacion) {%> 
                     <% if(locals.validacion[3].param == "usuario"){ %> 
-                        <label style="color: red"><%= locals.validacion[3].msg %> </label>
+                        <label style="color: red"> <%= locals.validacion[3].msg %> </label>
                     <% } %> 
                 <% } %> 
                 <label>Email</label>
