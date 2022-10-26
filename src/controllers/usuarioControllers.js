@@ -6,11 +6,14 @@ const pathUsuario = path.join(__dirname, '../data/registroUsuario.json');
 const usuario = JSON.parse(fs.readFileSync(pathUsuario,'utf-8'));
 
 const controllers = {
-    
+    vista:(req, res)=>{
+        res.render('registro');
+    },
+
     registro:(req, res) => {
         const errors = validationResult(req);
 
-        if(errors.isEmpty()){
+        if( errors.isEmpty()){
 
             let usuarioNuevo = {
                 nombre: req.body.nombre,
@@ -24,7 +27,7 @@ const controllers = {
             fs.writeFileSync(pathUsuario,JSON.stringify(usuario,null," "));
             res.redirect('/');
         } else {
-            res.render('index',{validacion: errors.array()});
+            res.render('registro',{validacion: errors.array()});
         }
     }
 }

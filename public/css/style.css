@@ -23,15 +23,17 @@ main > form{
     align-items: center;
     margin: auto;
     box-shadow: 0px 0px 20px rgb(0, 0, 0,0.5);
-    height: 400px;
+    height: 500px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.521);
     backdrop-filter: blur(5px);
+    justify-content: center;
 }
 
 h1{
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 form > label,input{
@@ -68,6 +70,15 @@ form > button:hover{
     box-shadow: 0px 0px 10px rgb(0, 0, 0,0.5);
 }
 
+.vali{
+    color: red;
+    margin-top: 2px;
+}
+form > a{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
 
 @media (min-width: 600px){
     main > form{

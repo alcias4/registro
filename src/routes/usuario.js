@@ -2,8 +2,10 @@ const usuarioControllers = require('../controllers/usuarioControllers');
 const express = require('express');
 const routes = express.Router();
 
-const validacion = require('../middleware/validacionRegistro');
+const validaciones = require('../middleware/validacionRegistro');
 
-routes.post('/registro', validacion ,usuarioControllers.registro);
+
+routes.get('/registro', usuarioControllers.vista)
+routes.post('/registro', validaciones ,usuarioControllers.registro);
 
 module.exports = routes;
