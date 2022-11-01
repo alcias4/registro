@@ -1,15 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     background-image: url('/img/17024-4k.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
 }
+
 
 main{
     min-height: 800px;
@@ -24,60 +19,51 @@ main > form{
     margin: auto;
     box-shadow: 0px 0px 20px rgb(0, 0, 0,0.5);
     height: 500px;
-    border-radius: 30px;
+    border-radius: 0px 30px 0px 30px;
     background-color: rgba(255, 255, 255, 0.521);
     backdrop-filter: blur(5px);
     justify-content: center;
 }
+.titulo{
+    position: absolute;
+    top: 70px;
+}
 
-h1{
-    text-align: center;
+form > label {
     margin-top: 20px;
-    margin-bottom: 30px;
 }
 
-form > label,input{
-    width: 70%;
-    text-align: center;
-
-}
-form > label{
-    margin-top: 15px;
-}
-
-form > input{
+form > input {
+    margin-top: 5px;
     border: none;
     padding: 5px;
-    border-radius: 8px;
-    background-color: #eee;
-    margin-top: 4px;
-    outline: none;
-}
-
-form > button{
-    margin-top: 20px;
-    width: 100px;
-    padding: 5px;
-    border: none;
     border-radius: 10px;
-    background-color: blue;
-    color: white;
+    text-align: center;
+    outline: none;
+    width: 70%;
+}
+
+form > button {
+    margin-top: 30px;
+    width: 50%;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    background-color: rgb(61, 61, 240);
+    color: white;
 }
 
 form > button:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgb(0, 0, 0,0.5);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0,0.3);
 }
 
-.vali{
-    color: red;
-    margin-top: 2px;
-}
-form > a{
+form > a {
     position: absolute;
+    top: 20px;
     right: 30px;
-    top: 30px;
+    text-decoration: none;
+ 
 }
 
 @media (min-width: 600px){

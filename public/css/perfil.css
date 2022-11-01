@@ -1,0 +1,73 @@
+body{
+    background-image: url('/img/17024-4k.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+main{
+    min-height: 800px;
+    display: flex;
+}
+main > div{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0,0.5);
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.521);
+    backdrop-filter: blur(5px);
+}
+
+main > div > h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+main > div > section {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: center;
+
+}
+
+.section  > label {
+    margin-top: 20px;
+}
+
+
+main > div > img {
+    width: 200px;
+}
+
+
+main > div > a {
+    margin-top: 30px;
+    text-decoration: none;
+    width: 200px;
+    background-color: blue;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.icon > button{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 40px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 600px){
+    main > div{
+        width: 500px;
+    }
+}

@@ -1,8 +1,10 @@
 [
  {
-  "nombre": "camilo andrade ",
-  "usuario": "alcias4",
-  "email": "andradecamilo226@gmail.com",
-  "password": "camilo04"
+  "id": 1,
+  "nombre": "camilo andrade",
+  "usuario": "alcias04",
+  "email": "andrade@gmail.com",
+  "password": "camilo04",
+  "img": "1667272654261Designer _Flatline.svg"
  }
 ]

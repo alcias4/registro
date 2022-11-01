@@ -5,9 +5,7 @@ const controllers = {
         res.render('index');
     },
 
-    registro:(req,res)=>{
-        console.log(req.body);
-    }
+
 }
 
 

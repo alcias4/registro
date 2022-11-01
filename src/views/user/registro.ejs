@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/registro.css">
     </head>
     <body>
         <main>
-            <form action="/user/registro" method="POST">
+            <form action="/user/registro" method="POST" enctype="multipart/form-data">
                 <a href="/">volver</a>
                 <h1>registro</h1>
                 <label>Nombre y apellido</label>
@@ -29,7 +29,7 @@
                 <label>Email</label>
                 <input type="email" name="email">
                 <% if(locals && locals.validacion) {%> 
-                    <% if(locals.validacion[2].param == "email"){ %> 
+                    <% if(locals.validacion[2].param == "email" ){ %> 
                         <label class="vali"><%= locals.validacion[2].msg %> </label>
                     <% } %> 
                 <% } %>  
@@ -40,6 +40,8 @@
                         <label class="vali"><%= locals.validacion[3].msg %> </label>
                     <% } %> 
                 <% } %>  
+                <label>Ingrese img de perfil</label>
+                <input type="file" name="img" required>
                 <button type="submit">Enviar</button>
 
             </form>
