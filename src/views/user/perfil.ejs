@@ -19,7 +19,10 @@
             </section>
             <a href="/">Volver a inico</a>
             <form action="/user/eli/<%=dato.id %>?_method=DELETE" method="POST" class="icon">
-                <button><i class="fa-solid fa-trash"></i></button>
+                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+            </form>
+            <form action="/user/salir/delete" method="POST">
+                <button type="submit">cerrar sesion</button>
             </form>
         </div>
     </main>

@@ -17,5 +17,5 @@ routes.post('/login', validacionLogin ,usuarioControllers.perfil);
 routes.get('/perfil', usuarioControllers.vistaPerfil)
 
 routes.delete('/eli/:id' , usuarioControllers.eliminar);
-
+routes.post('/salir/:id', usuarioControllers.salir)
 module.exports = routes;

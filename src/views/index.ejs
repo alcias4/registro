@@ -10,11 +10,12 @@
         <main>
             <div>
                 <h1>Bienvenido</h1>
-                <a href="/user/registro">registro</a>
-                <a href="/user/login">Iniciar secion</a>
-                
-                <a href="/user/perfil">perfil</a>
-                
+                <% if(dato) {%> 
+                    <a href="/user/perfil">perfil</a>
+                <%}else { %> 
+                    <a href="/user/registro">registro</a>
+                    <a href="/user/login">Iniciar secion</a>
+                <% } %> 
             </div>
         </main>
   

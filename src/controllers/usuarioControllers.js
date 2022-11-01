@@ -93,6 +93,16 @@ const controllers = {
         fs.writeFileSync(pathUsuario,JSON.stringify(arreglosNotas,null," "));
         
         res.redirect("/");
+    },
+
+    salir: (req, res)=>{
+
+        let salir = req.params.id
+
+        if(salir == "delete"){
+            delete req.session.profile
+            res.redirect('/')
+        }
     }
 }
 
