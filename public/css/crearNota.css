@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body{
+    background-image: url('/img/17024-4k.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.crearNota{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainNota{
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.733);
+    align-self: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainNota  > div{
+    width: 70%;
+    align-self: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.mainNota  > div > textarea{
+    resize: none;
+    overflow-y: scroll;
+    height: 200px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-top: 5px;
+}

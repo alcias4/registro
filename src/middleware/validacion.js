@@ -1,4 +1,4 @@
-const e = require('express');
+const bcryptjs = require('bcryptjs')
 const fs = require('fs');
 const path = require('path');
 
@@ -13,8 +13,8 @@ function validacionLogin(req, res, next){
         return usuario.email == email;
     });
     
-
-    if(usuario.email == email && usuario.password == password){
+    
+    if(usuario.email == email && bcryptjs.compareSync(password, usuario.password) ==  true){
         next()
     }else {
         res.render('user/login');   

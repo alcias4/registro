@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include('../partials/head.ejs') %> 
     <link rel="stylesheet" href="/css/perfil.css">
-    <script src="https://kit.fontawesome.com/a4e61d7a9e.js" crossorigin="anonymous"></script>
     <title>Perfil</title>
 </head>
 <body>
     <main>
-        <div>
-            <h2>Bienvenido <%= dato.nombre %> </h2>
-            <img src="/img/perfil/<%= dato.img %>" name="img">
-            <section class="section">
-                <label>usuario: <%= dato.usuario %> </label>
-                <label>correo: <%= dato.email %> </label>
-                <label>Contraseña: <%= dato.password %> </label>
+        <%- include('../partials/navPerfil') %> 
+        <div class="contenidoNotas">
+            <div class="barraNotas">
+                <label>Notas</label>
+            </div>
+            <% for(let nota of notas) {%> 
+            <section class="notaGuardadas">
+                <figure>
+                    <img src="/img/imagenes-notas/<%= nota.img %> " >
+                </figure>
+                <div class="contenido-info">
+                    <label class="fecha"><%= nota.fecha %> </label>
+                    <label class="notaTitulo"><%= nota.titulo %> </label>
+                    <p class="cont-nota"><%= nota.descripcion %> </p>
+                    <div class="tag">
+                        <label>Largo plazo</label>
+                        <label>Dificil</label>
+                    </div>
+                    <div class="botones-notas">
+                        <a href="#"><i class="fa-solid fa-file-pen"></i></a>
+                        <form action="/user/eli/<%=dato.id %>?_method=DELETE" method="POST" class="icon">
+                            <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
             </section>
-            <a href="/">Volver a inico</a>
-            <form action="/user/eli/<%=dato.id %>?_method=DELETE" method="POST" class="icon">
-                <button type="submit"><i class="fa-solid fa-trash"></i></button>
-            </form>
-            <form action="/user/salir/delete" method="POST">
-                <button type="submit">cerrar sesion</button>
-            </form>
+            <% } %> 
         </div>
     </main>
 

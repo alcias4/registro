@@ -1,0 +1,119 @@
+main{
+    min-height: 800px;
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+    height: 700px;
+   
+}
+
+
+.navPerfil{
+    width: 20%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(10px);
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.navPerfil > figure {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.nombre{
+    text-transform: capitalize;
+}
+
+.usuario{
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.612);
+}
+
+.navPerfil > figure  > img {
+    margin-top: 20px;
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}   
+
+.btn-perfil{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-notas{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-notas > a{
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    color: black;
+    background-color: aliceblue;
+    align-self: center;
+    margin-top: 20px;
+    padding-top: 5px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 100ms ease;
+    
+}
+
+.btn-notas > a >i{
+    position: absolute;
+    left: 8px;
+    font-size: 14px;
+    top: 7px;
+}
+
+.btn-notas > a:hover {
+    transform: scale(1.05);
+
+}
+
+.btn-cerrar>form{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cerrar > form > button{
+    width: 80%;
+    height: 35px;
+    margin-bottom: 20px;
+    align-self: center;
+    padding-bottom: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: 	#2196f3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+}
+
+.btn-cerrar > form > button> i{
+    position: absolute;
+    left: 8px;
+    font-size: 14px;
+    top: 10px;
+}
+.btn-cerrar > form > button:hover{
+    transition: all 100ms ease;
+    transform: scale(1.05);
+}

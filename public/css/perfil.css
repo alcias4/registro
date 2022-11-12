@@ -1,3 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 body{
     background-image: url('/img/17024-4k.jpg');
     background-position: center;
@@ -7,67 +14,155 @@ body{
 main{
     min-height: 800px;
     display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+    height: 700px;
+   
 }
-main > div{
+
+.contenidoNotas{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 0px 20px 20px 0px;
+    overflow-y: scroll;
+}
+
+
+
+.barraNotas{
     width: 90%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #2196f3;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
     margin: auto;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0,0.5);
-    height: 500px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.521);
-    backdrop-filter: blur(5px);
-}
-
-main > div > h2 {
-    margin-top: 30px;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-
-main > div > section {
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    justify-content: center;
-
-}
-
-.section  > label {
     margin-top: 20px;
 }
-
-
-main > div > img {
-    width: 200px;
+.barraNotas > label{
+    padding-top: 5px;
 }
 
-
-main > div > a {
-    margin-top: 30px;
-    text-decoration: none;
-    width: 200px;
-    background-color: blue;
-    color: #fff;
-    padding: 5px;
+.barraNotas > a{
     text-align: center;
-    border-radius: 10px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: aliceblue;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    padding-bottom: 4px;
+    color: black;
+    text-decoration: none;
+    padding-top: 6px;
 }
 
-.icon > button{
+
+.barraNotas > a > i{
     position: absolute;
-    right: 30px;
-    bottom: 30px;
-    border-radius: 40px;
-    border: none;
-    padding: 10px;
+    left: 10px;
+    padding-top: 2px;
+}
+
+
+.notaGuardadas{
+    display: flex;
+    width: 90%;
+    min-height: 250px;
+    background-color: aliceblue;
+    align-self: center;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 2%;
+}
+.notaGuardadas > figure{
+    width: 30%;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.notaGuardadas > figure > img {
+    width: 200px;
+
+}
+
+.contenido-info{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+.fecha{
+    font-weight: 200;
+}
+
+.notaTitulo{
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.cont-nota{
+    margin-top: 5px;
+    width: 100%;
+    text-align: justify;
+    min-height: 80px;
+}
+
+.tag{
+    margin-top: 10px;
+    display: flex;
+}
+
+.tag > label{
+    font-size: 14px;
+    margin-right: 20px;
+    background-color: #2195f3c7;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.botones-notas{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
     cursor: pointer;
 }
 
-@media (min-width: 600px){
-    main > div{
-        width: 500px;
-    }
+.botones-notas > a{
+    text-decoration: none;
+    margin-right: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: #0d3352;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.botones-notas> form > button {
+    background-color: #0d3352;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    padding-left: 3px;
 }

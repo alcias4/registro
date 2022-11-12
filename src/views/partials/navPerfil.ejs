@@ -1,0 +1,21 @@
+<div class="navPerfil">
+    <figure>
+        
+        <img src="/img/perfil/<%= dato.img %>" name="img" >
+        <label class="nombre"><%= dato.nombre %> </label>
+        <label class="usuario">@<%= dato.usuario %> </label>
+    </figure>
+    <section class="btn-perfil">
+        <div class="btn-notas">
+            <a href="/user/perfil"><i class="fa-solid fa-money-check"></i>Mis notas</a>
+            <a href="/notas/crear"><i class="fa-solid fa-file-circle-plus"></i>Nueva nota</a>
+            <a href="#"><i class="fa-solid fa-user-pen"></i>Editar perfil</a>
+            <a href="/"><i class="fa-solid fa-house-chimney"></i>Inico</a>
+        </div>
+        <div class="btn-cerrar">
+            <form action="/user/salir/delete" method="POST">
+                <button type="submit"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion</button>
+            </form>
+        </div>
+    </section>
+</div>

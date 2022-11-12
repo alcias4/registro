@@ -1,23 +1,24 @@
 const fs = require('fs');
 const path = require('path');
-const {validationResult} = require('express-validator');
-
+const bcryptjs = require('bcryptjs');
 const pathUsuario = path.join(__dirname, '../data/registroUsuario.json');
 const usuario = JSON.parse(fs.readFileSync(pathUsuario,'utf-8'));
-
+const pathNotas = path.join(__dirname, '../data/notas.json')
+const notas = JSON.parse(fs.readFileSync(pathNotas,'utf-8'));
 const controllers = {
     vista:(req, res)=>{
-        res.render('user/registro');
+        
+        res.render('user/registro',{error:false});
     },
 
     registro:(req, res) => {
-        const errors = validationResult(req);
+        
         
         let idNuevo = 0;
 
 
         
-        if( errors.isEmpty()){
+        
             
             for(let s of usuario){
                 if(idNuevo < s.id){
@@ -27,12 +28,15 @@ const controllers = {
     
             idNuevo++
             let imgName = req.file.filename;
+            let password = req.body.password;
+            let nuevaPasword = bcryptjs.hashSync(password, 10)
+            
             let usuarioNuevo = {
                 id:idNuevo,
                 nombre: req.body.nombre,
                 usuario: req.body.usuario,
                 email: req.body.email,
-                password: req.body.password,
+                password: nuevaPasword,
                 img:imgName,
                
 
@@ -40,10 +44,9 @@ const controllers = {
 
             usuario.push(usuarioNuevo);
             fs.writeFileSync(pathUsuario,JSON.stringify(usuario,null," "));
-            res.redirect('/');
-        } else {
-            res.render('user/registro',{validacion: errors.array()});
-        }
+            res.redirect('/user/login');
+        
+        
     },
 
     loginVista:(req, res)=>{
@@ -60,14 +63,20 @@ const controllers = {
 
         req.session.profile = usuarioInici;
 
-
+        
 
         res.redirect('/user/perfil')
-    },
+    },  
 
     vistaPerfil:(req, res)=>{
-
-        res.render('user/perfil',{dato: req.session.profile});
+        const notas = JSON.parse(fs.readFileSync(pathNotas,'utf-8'));
+        if(req.session.profile){
+            res.render('user/perfil',{dato: req.session.profile,notas:notas});
+        }else{
+            delete req.session.profile;
+            res.redirect('/')
+        }
+        
         
     },
 

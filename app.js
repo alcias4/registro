@@ -1,9 +1,11 @@
 const mainRoutes = require('./src/routes/main');
 const usuario = require('./src/routes/usuario');
+const notas  = require('./src/routes/notas')
 const express = require('express');
 const path  = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const bcryptjs =require('bcryptjs')
 
 const app = express();
 
@@ -31,7 +33,7 @@ app.set('views', path.join(__dirname, './src/views'));
 
 app.use('/', mainRoutes);
 app.use('/user', usuario);
-
+app.use('/notas', notas )
 
 
 app.listen(process.env.PORT || 3001, function(){

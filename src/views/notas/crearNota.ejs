@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include('../partials/head') %> 
+        <link rel="stylesheet" href="/css/crearNota.css">
+        <title>Nueva nota</title>
+    </head>
+    <body>
+        <main>
+            <%- include('../partials/navPerfil') %> 
+            <section  class="crearNota">
+                <form action="/notas/crear" method="post" class="mainNota">
+                    <div>
+                        <label>Titulo</label>
+                        <input name="titulo" type="text">
+                    </div>
+                    <div>
+                        <label>Fecha</label>
+                        <input name="fecha" type="text">
+                    </div>
+                    <div>
+                        <label>Nota</label>
+                        <textarea name="descripcion"></textarea>
+                    </div>
+                    <div>
+                        <label>Tipo</label>
+                        <select name="tipo">
+                            <option value="trabajo en equipo">Trabajo en equipo</option>
+                            <option value="rrabajo">Trabajos</option>
+                            <option value="tarae de univerdidad">tarae de univerdidad</option>
+                            <option value="meta personal">Meta personal</option>
+                            <option value="nota personal" >Nota personal</option>
+                        </select>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

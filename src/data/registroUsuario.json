@@ -1,10 +1,26 @@
 [
  {
   "id": 1,
+  "nombre": "camilo andrade ",
+  "usuario": "alcias4",
+  "email": "camilo@gmail.com",
+  "password": "$2a$10$7B657W.3AA9eP7Xt0VDMMe9oG2xKmc9TzNhKFDJVm6RrGweTDopA6",
+  "img": "1667972642181trabajo.png"
+ },
+ {
+  "id": 2,
   "nombre": "camilo andrade",
-  "usuario": "alcias04",
+  "usuario": "camilo@gmail.com",
+  "email": "camilo@gmil.com",
+  "password": "$2a$10$vj/eiRNSqHlA7JyY7QcftOhHx9AQHw0ZmFQ/OgrsP4A8YZD2NFOYm",
+  "img": "1668230433466Captura desde 2022-10-27 08-15-09.png"
+ },
+ {
+  "id": 3,
+  "nombre": "camilo andrade",
+  "usuario": "camilo04",
   "email": "andrade@gmail.com",
-  "password": "camilo04",
-  "img": "1667272654261Designer _Flatline.svg"
+  "password": "$2a$10$JMFLQ5aJIiRg61QZJ3/VQ.LG8mFOiW54XZ7WADlHoA..Seh.TUNOC",
+  "img": "166823067276401kgv4.jpg"
  }
 ]
