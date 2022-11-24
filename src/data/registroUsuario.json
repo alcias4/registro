@@ -22,5 +22,21 @@
   "email": "andrade@gmail.com",
   "password": "$2a$10$JMFLQ5aJIiRg61QZJ3/VQ.LG8mFOiW54XZ7WADlHoA..Seh.TUNOC",
   "img": "166823067276401kgv4.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "camilo ",
+  "usuario": "alberto4",
+  "email": "albe@gmail.com",
+  "password": "$2a$10$6cMkhqVTzG85a/8DPyiNcumVvqmHQrLSuTVCVbqLVRf8PbwuJ67YW",
+  "img": "1668872111706fogg-918.png"
+ },
+ {
+  "id": 5,
+  "nombre": "camilo andrade ",
+  "usuario": "jose",
+  "email": "jose@gmail.com",
+  "password": "$2a$10$ZeQ57N9o5h32wqUp3inrPuuJ/e1qNX9VVnVYfoiZ6Tqbt4Ib0vakG",
+  "img": "1668872206128fogg-918.png"
  }
 ]

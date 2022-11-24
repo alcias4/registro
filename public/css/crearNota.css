@@ -52,3 +52,22 @@ body{
     padding-left: 10px;
     padding-top: 5px;
 }
+
+.submit{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.submit:focus {
+    background-color: forestgreen;
+    transform: scale(0.1);
+}

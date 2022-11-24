@@ -28,7 +28,7 @@
                     </div>
                     <div class="botones-notas">
                         <a href="#"><i class="fa-solid fa-file-pen"></i></a>
-                        <form action="/user/eli/<%=dato.id %>?_method=DELETE" method="POST" class="icon">
+                        <form action="/notas/eliminar/<%=nota.id %>?_method=DELETE" method="POST" class="icon">
                             <button type="submit"><i class="fa-solid fa-trash"></i></button>
                         </form>
                     </div>
@@ -37,6 +37,6 @@
             <% } %> 
         </div>
     </main>
-
+    <script src="/js/ eventos.js"></script>
 </body>
 </html>

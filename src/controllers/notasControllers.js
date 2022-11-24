@@ -1,3 +1,4 @@
+const { query } = require('express');
 const fs = require('fs');
 const path = require('path');
 
@@ -26,11 +27,12 @@ const controllers ={
 
         
         let img;
-        if(req.body.tipo == 'tarae de univerdidad'){
+        let tipo =req.body.tipo;
+        if(tipo == 'tarae de univerdidad'){
             img = 'trabajoTeam.png';
-        }else if(req.body.tipo == 'tarae de univerdidad'){
-            img = "trabajo.png";
-        }else{
+        }else if(tipo == 'amigos'){
+            img = "amigos.png";
+        }else if(tipo == 'trabajo'){
             img = "trabajo.png"
         }
 
@@ -46,6 +48,22 @@ const controllers ={
         notas.push(nuevaNota);
         fs.writeFileSync(pathNotas, JSON.stringify(notas,null," "));
         res.redirect('/user/perfil');
+    },
+
+    eliminar:(req,res)=>{
+        let notaId = req.params.id;
+        
+        let notaEncontrado = notas.find(nota =>{
+            return nota.id == notaId;
+        })
+
+        let notasRestantes = notas.filter(function(elemento){
+            return elemento.id != notaId;
+        });
+
+        fs.writeFileSync(pathNotas, JSON.stringify(notasRestantes, null, " "));
+        res.redirect('/user/perfil')
+        
     }
     
 
